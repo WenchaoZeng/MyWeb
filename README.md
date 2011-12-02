@@ -13,10 +13,6 @@ Another important thing is that, not all users are web developers or designers w
 
 So, MyWeb is the tool we need. Web developers and designers use it to customize web site style/layout for their needs and also glad enough to share them with others. Others, end users, have the choices of styles when browse a site.
 
-## How it works
-
-Firstly we need a server for sharing styles. Secondly we build a tool (currently it's an extension of chrome browser) for submitting styles and consuming styles.
-
 ## For end users
 
 When browse a web site, in the left top corner of the page, users can see a list of styles. By clicking a style in the list, the page style/layout will be changed. The choices are saved and the chosen style is applied when the same site is visited next time. 
@@ -24,3 +20,7 @@ When browse a web site, in the left top corner of the page, users can see a list
 ## For web designers
 
 If a web developer or designer finds that the style/layout of a site is not good enough, he/she can use our tool to define a custom style for that site, upload to the server by giving his/her email, the style name, and the CSS content. After this, he/she, as an end user, can use the defined styles.
+
+## How it works
+
+Firstly we need a server for sharing styles. Secondly we build a tool (currently it's an extension of chrome browser) for submitting styles and consuming styles.
