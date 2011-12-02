@@ -6,7 +6,7 @@ I, as a web developer, know that I can change the layout/style of a site if I ca
 
 Another important thing is that, not all users are web developers or designers who know CSS, HTML and to modify the page style. If there is a platform that specialists can define their own styles and share them with others who are possible to use these custom styles without knowing HTML, CSS.
 
-So, MyWeb is the tool we need. Web developers and designers use it to custom web site style/layout for their needs and also glad enough to share them with others. Others, end users, have the choices of styles when browse a site.
+So, MyWeb is the tool we need. Web developers and designers use it to customize web site style/layout for their needs and also glad enough to share them with others. Others, end users, have the choices of styles when browse a site.
 
 ## How it works
 
