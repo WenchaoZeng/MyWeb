@@ -1,3 +1,8 @@
+## MyWeb
+
+MyWeb is a tool for customizing style/layout of web sites (any sites you are browsing), sharing results with others and consuming styles/layouts created by others.
+
+
 ## Why we need this tool
 
 Before this, users browse web sites normally in one fixed style and layout and could not change it in accordance with their preferences. For example, if the font of a site is too small for users to read, end users can't do anything except accepting it. In general, a web site always has only one layout and style, while some users may want other ones which are consistent with their habits, such as black background, green text, bigger text, fit to small screen etc..
