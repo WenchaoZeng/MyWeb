@@ -7,9 +7,9 @@ MyWeb is a tool for customizing style/layout of web sites (any sites you are bro
 
 Before this, users browse web sites normally in one fixed style and layout and could not change it in accordance with their preferences. For example, if the font of a site is too small for users to read, end users can't do anything except accepting it. In general, a web site always has only one layout and style, while some users may want other ones which are consistent with their habits, such as black background, green text, bigger text, fit to small screen etc..
 
-I, as a web developer, know that I can change the layout/style of a site if I can edit its CSS or append my own CSS content to it. By customizing CSS, we suddenly realize that we have our own control for sites we are browsing. We no longer only accept the only one style/layout that the site provides, we can design our own style to fit our special needs.
+I, as a web developer, know that I can change the layout/style of a site if I can edit its [CSS](http://en.wikipedia.org/wiki/Cascading_Style_Sheets) or append my own CSS content to it. By customizing CSS, we suddenly realize that we have our own control for sites we are browsing. We no longer only accept the only one style/layout that the site provides, we can design our own style to fit our special needs.
 
-Another important thing is that, not all users are web developers or designers who have HTML, CSS skill to modify the page. If there is a platform that specialists define their own styles and share the results, others are possible to just use these custom styles without any knowledge of HTML, CSS.
+Another important thing is that, not all users are web developers or designers who have [HTML](http://en.wikipedia.org/wiki/HTML), CSS skill to modify the page. If there is a platform that specialists define their own styles and share the results, others are possible to just use these custom styles without any knowledge of HTML, CSS.
 
 So, MyWeb is the tool we need. Web developers and designers use it to customize web site style/layout for their needs and also glad enough to share them with others. Others, end users, have the choices of styles when browse a site.
 
