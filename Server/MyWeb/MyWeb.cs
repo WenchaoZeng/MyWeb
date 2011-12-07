@@ -49,30 +49,31 @@ namespace name.zwc.Caller.Handlers
 
             lock (_submitStyleLock)
             {
-                OleDbDataReader reader = db.Execute("select [email] from [styles] where [domain] = ? and [title] = ?", style.Domain, style.Title);
-                if (reader.HasRows && reader.Read())
+                using (OleDbDataReader reader = db.Execute("select [email] from [styles] where [domain] = ? and [title] = ?", style.Domain, style.Title))
                 {
-                    String email = (String)reader["email"];
-
-                    // Update an existing style if it was submitted by the same email.
-                    if (email.Equals(style.Email))
+                    if (reader.HasRows && reader.Read())
                     {
-                        db.Execute("update [styles] set [content] = ?, [updatetime] = ? where [domain] = ? and [title] = ?",
-                            style.Content, style.UpdateTime, style.Domain, style.Title);
-                    }
+                        String email = (String)reader["email"];
+
+                        // Update an existing style if it was submitted by the same email.
+                        if (email.Equals(style.Email))
+                        {
+                            db.Execute("update [styles] set [content] = ?, [updatetime] = ? where [domain] = ? and [title] = ?",
+                                style.Content, style.UpdateTime, style.Domain, style.Title);
+                        }
                         // Unable to update styles which were submitted by others.
+                        else
+                        {
+                            return "Unable to update styles which were submitted by others";
+                        }
+                    }
+                    // Non existing style, create a new one.
                     else
                     {
-                        return "Unable to update styles which were submitted by others";
+                        db.Execute("insert into [styles]([email], [domain], [title], [content], [updatetime]) values(?, ?, ?, ?, ?)"
+                            , style.Email, style.Domain, style.Title, style.Content, style.UpdateTime);
                     }
                 }
-                    // Non existing style, create a new one.
-                else
-                {
-                    db.Execute("insert into [styles]([email], [domain], [title], [content], [updatetime]) values(?, ?, ?, ?, ?)"
-                        , style.Email, style.Domain, style.Title, style.Content, style.UpdateTime);
-                }
-
             }
 
             return "true";
@@ -81,19 +82,23 @@ namespace name.zwc.Caller.Handlers
         {
             String domain = args["domain"];
 
-            OleDbDataReader reader = db.Execute("select [title] from [styles] where [domain] = ?", domain);
-            List<Style> styles = parseStyles(reader);
-            return JSON.Instance.ToJSON(styles); ;
+            using (OleDbDataReader reader = db.Execute("select [title] from [styles] where [domain] = ?", domain))
+            {
+                List<Style> styles = parseStyles(reader);
+                return JSON.Instance.ToJSON(styles);
+            }
         }
         public static String GetStyle(String input, Dictionary<String, String> args)
         {
             String domain = args["domain"];
             String title = args["title"];
 
-            OleDbDataReader reader = db.Execute("select [content] from [styles] where [domain] = ? and [title] = ?", domain, title);
-            if (reader.HasRows && reader.Read())
+            using (OleDbDataReader reader = db.Execute("select [content] from [styles] where [domain] = ? and [title] = ?", domain, title))
             {
-                return (String)reader["content"];
+                if (reader.HasRows && reader.Read())
+                {
+                    return (String)reader["content"];
+                }
             }
             return null;
         }
