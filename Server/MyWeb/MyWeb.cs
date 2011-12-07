@@ -49,17 +49,30 @@ namespace name.zwc.Caller.Handlers
 
             lock (_submitStyleLock)
             {
-                if (db.Execute("select [id] from [styles] where [email] = ? and [domain] = ? and [title] = ?",
-                    style.Email, style.Domain, style.Title).HasRows)
+                OleDbDataReader reader = db.Execute("select [email] from [styles] where [domain] = ? and [title] = ?", style.Domain, style.Title);
+                if (reader.HasRows && reader.Read())
                 {
-                    db.Execute("update [styles] set [content] = ?, [updatetime] = ? where [email] = ? and [domain] = ? and [title] = ?",
-                        style.Content, style.UpdateTime, style.Email, style.Domain, style.Title);
+                    String email = (String)reader["email"];
+
+                    // Update an existing style if it was submitted by the same email.
+                    if (email.Equals(style.Email))
+                    {
+                        db.Execute("update [styles] set [content] = ?, [updatetime] = ? where [domain] = ? and [title] = ?",
+                            style.Content, style.UpdateTime, style.Domain, style.Title);
+                    }
+                        // Unable to update styles which were submitted by others.
+                    else
+                    {
+                        return "Unable to update styles which were submitted by others";
+                    }
                 }
+                    // Non existing style, create a new one.
                 else
                 {
                     db.Execute("insert into [styles]([email], [domain], [title], [content], [updatetime]) values(?, ?, ?, ?, ?)"
                         , style.Email, style.Domain, style.Title, style.Content, style.UpdateTime);
                 }
+
             }
 
             return "true";
