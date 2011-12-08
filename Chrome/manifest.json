@@ -1,0 +1,15 @@
+{
+  "name": "MyWeb",
+  "version": "1.0",
+  "description": "A tool which allows us to browse web sites in our own way (by customizing styles/layouts).",
+  "permissions": [
+    "http://zwc.name/"
+  ],
+   "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["myweb.css"],
+      "js": ["jquery.js", "myweb.js"]
+    }
+  ]
+}
