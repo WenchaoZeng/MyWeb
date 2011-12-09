@@ -2,6 +2,8 @@
 
 MyWeb is a tool for customizing style/layout of web sites (any sites you are browsing), sharing results with others and consuming styles/layouts created by others.
 
+[Download](https://github.com/WenchaoZeng/MyWeb/wiki/Releases)
+
 
 ## Why we need this tool
 
