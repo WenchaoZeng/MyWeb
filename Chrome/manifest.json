@@ -9,7 +9,8 @@
     {
       "matches": ["<all_urls>"],
       "css": ["myweb.css"],
-      "js": ["jquery.js", "myweb.js"]
+      "js": ["jquery.js", "myweb.js"],
+      "run_at" : "document_end"
     }
   ]
 }
