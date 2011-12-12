@@ -2,7 +2,7 @@
 
 MyWeb is a tool for customizing style/layout of web sites (any sites you are browsing), sharing results with others and consuming styles/layouts created by others.
 
-[Download](https://github.com/WenchaoZeng/MyWeb/wiki/Releases)
+[Download and Install Chrome Extension](https://github.com/downloads/WenchaoZeng/MyWeb/Chrome_1.0_2011-12-9.crx)
 
 
 ![screen shot](https://github.com/WenchaoZeng/MyWeb/raw/master/screen_shot1.PNG)
