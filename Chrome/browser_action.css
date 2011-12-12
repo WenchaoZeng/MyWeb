@@ -1,48 +1,24 @@
-#MyWeb
+body
 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index:9999;
     cursor: default;
     font-weight: normal;
     font-size: 9pt;
     font: menu;
     color: #345;
-    margin: 0;
-    text-align:left;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #FAFCFF), color-stop(1, #EFF3FE));
 }
-#MyWeb span
+span
 {
     display:block;
 }
-#MyWeb .title, #MyWeb .menu, #MyWeb .edit
-{
-    background: white;
-    -webkit-box-shadow: 2px 2px 3px #888;
-    border-radius: 3px;
-    padding: 4px;
-}
-#MyWeb .title
-{
-    opacity: 0.1;
-}
-#MyWeb .title:hover, #MyWeb .title:active
-{
-    opacity: 1;
-}
-#MyWeb .title, #MyWeb .menu, #MyWeb .edit
-{
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #FAFCFF), color-stop(1, #EFF3FE));
-}
-#MyWeb .title, #MyWeb .menu .default, #MyWeb .menu li, #MyWeb .customize{
+.menu .default, .menu li, .customize{
 	padding: 4px 5px;
 	-webkit-padding-start: 6px;
 	margin: 0px 2px;
 	white-space: nowrap;
 }
 
-#MyWeb .title:hover, #MyWeb .menu .default:hover, #MyWeb .menu li:hover, #MyWeb .customize:hover{
+.menu .default:hover, .menu li:hover, .customize:hover{
 	padding: 3px 4px;
 	-webkit-padding-start: 5px;
 	border: solid 1px #bcd;
@@ -52,7 +28,7 @@
 		color-stop(0, #fff),  color-stop(0.4, hsl(215, 67%, 97%)), color-stop(0.41, hsl(213, 48%, 95%)));
 }
 
-#MyWeb .title:active, #MyWeb .menu .default:active, #MyWeb .menu li:active, #MyWeb .customize:active{
+.menu .default:active, .menu li:active, .customize:active{
 	padding: 3px 4px;
 	-webkit-padding-start: 5px;
 	border: solid 1px #abc;
@@ -60,32 +36,34 @@
 	background: #dde7f2 none;
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e8eef4), color-stop(1, #f5f9f4));
 }
-#MyWeb .menu .default, #MyWeb .menu li, #MyWeb .customize{
+.menu .default, .menu li, .customize{
     padding-left:20px!important;
 }
-#MyWeb .menu .default:hover, #MyWeb .menu li:hover, #MyWeb .customize:hover, #MyWeb .menu .default:active, #MyWeb .menu li:active, #MyWeb .customize:active{
+.menu .default:hover, .menu li:hover, .customize:hover, .menu .default:active, .menu li:active, .customize:active{
     padding-left:19px!important;
     background-position:0px center!important;
 }
-#MyWeb .menu .checked
+.menu .checked
 {
-    background-image:url(chrome-extension://__MSG_@@extension_id__/checked.png)!important;
+    background-image:url(checked.png)!important;
     background-position:1px center!important;
     background-repeat:no-repeat!important;
 }
 
-#MyWeb .edit
+.edit
 {
     text-align: right;
+    display:none;
+    margin:10px;
 }
-#MyWeb .edit table {
+.edit table {
 	border-spacing: 1px;
 	padding: 7px;
 	table-layout: fixed;
     text-align:left;
 }
 
-#MyWeb .edit table th {
+.edit table th {
 	height: 28px;
 	padding-left: 8px;
 	padding-right: 8px;
@@ -94,25 +72,25 @@
 	font-weight: normal;
 }
 
-#MyWeb .edit table td {
+.edit table td {
 	height: 28px;
 	overflow: hidden;
 	vertical-align: middle;
 }
 
-#MyWeb .edit input{
+.edit input{
 	width: 359px;
 	min-height: 24px;
 	height: 100%;
 	-webkit-padding-start: 3px;
     font:menu;
 }
-#MyWeb .edit textarea{
-    height:300px;
+.edit textarea{
+    height:420px;
     width:400px;
     font:menu;
 }
-#MyWeb .edit button {
+.edit button {
 	color: #567;
 	display: inline-block;
 	text-align: center;
@@ -125,19 +103,12 @@
 	-webkit-box-shadow: 0px 1px 2px #ddd;
 }
 
-#MyWeb .edit button:hover {
+.edit button:hover {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f6fafe), color-stop(1, #e3ebf7));
 	background: -webkit-gradient(linear, left top, left bottom, 
 		color-stop(0, #fff),  color-stop(0.4, hsl(215, 67%, 97%)), color-stop(0.41, hsl(213, 48%, 94%)));
 }
 
-#MyWeb .edit button:active {
+.edit button:active {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e0e9f4), color-stop(1, #f5f9f4));
-}
-#MyWeb .edit button{
-    margin-right:10px;
-}
-#MyWeb .edit button.upload{
-    
-    margin-right:9px;
 }

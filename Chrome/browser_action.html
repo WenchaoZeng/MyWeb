@@ -1,0 +1,26 @@
+<link href="reset.css" rel="stylesheet" type="text/css">
+<link href="browser_action.css" rel="stylesheet" type="text/css">
+<script src="jquery.js"></script>
+<script src="browser_action.js"></script>
+
+<div class='menu'>
+  <span class='default'>Default Style</span>
+   <ul class='list'>
+      <li>Loading...</li>
+  </ul>
+  <span class='customize'>Customize Style</span>
+</div>
+
+<div class='edit'>
+    <table>
+        <tbody>
+            <tr><th>Email</th><td><input id='email' type='text' /></td></tr>
+            <tr><th>Title</th><td><input id='title' type='text' /></td></tr>
+            <tr><th colspan='2'>CSS Content</th></tr>
+            <tr><td colspan='2'><textarea id='content'></textarea></td></tr>
+        </tbody>
+    </table>
+    <button class='cancel'>Cancel</button>
+    <button class='save' title='Will be lost when switch to Default Style or other styles.'>Save in Local</button>
+    <button class='upload'>Upload and Share with Others</button>
+</div>
