@@ -5,7 +5,7 @@ MyWeb is a tool for customizing style/layout of web sites (any sites you are bro
 [Downloads](https://github.com/WenchaoZeng/MyWeb/downloads)
 
 
-![screen shot](https://github.com/WenchaoZeng/MyWeb/raw/master/screen_shot.PNG)
+![screen shot](https://github.com/WenchaoZeng/MyWeb/raw/master/screen_shot.png)
 
 
 ## Why we need this tool
